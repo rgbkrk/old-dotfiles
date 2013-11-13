@@ -1,0 +1,11 @@
+syntax on
+
+set bg=dark
+set ts=2
+set expandtab
+set shiftwidth=2
+
+" Highlight trailing whitespace.
+:autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$\| \+\ze\t/

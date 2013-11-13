@@ -1,0 +1,15 @@
+[user]
+	email = AUTHOREMAIL
+	name = AUTHORNAME
+[core]
+	excludesfile = ${HOME}/.gitignore
+[color]
+	ui = auto
+[push]
+	default = upstream
+[alias]
+	lol = log --oneline --graph --decorate
+  promote = !$DOT/bin/git-promote
+  wtf     = !$DOT/bin/git-wtf
+  rank-contributers = !$DOT/bin/git-rank-contributers
+  count   = !git shortlog -sn
