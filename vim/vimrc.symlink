@@ -9,3 +9,5 @@ set shiftwidth=2
 :autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+colorscheme candycode
