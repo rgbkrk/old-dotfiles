@@ -3,13 +3,15 @@
 	name = AUTHORNAME
 [core]
 	excludesfile = ${HOME}/.gitignore
+	editor = vim
 [color]
 	ui = auto
+	diff = always
 [push]
 	default = upstream
 [alias]
 	lol = log --oneline --graph --decorate
-  promote = !$DOT/bin/git-promote
-  wtf     = !$DOT/bin/git-wtf
-  rank-contributers = !$DOT/bin/git-rank-contributers
-  count   = !git shortlog -sn
+	promote = !$DOT/bin/git-promote
+	wtf     = !$DOT/bin/git-wtf
+	rank-contributers = !$DOT/bin/git-rank-contributers
+	count   = !git shortlog -sn
