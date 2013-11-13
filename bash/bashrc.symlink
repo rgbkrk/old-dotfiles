@@ -7,11 +7,15 @@ shopt -s globstar
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
+else
+  echo "~/.localrc not setup"
 fi
 
 # Make sure that __git_ps1 is defined.
 if [[ -f /etc/bash_completion.d/git-prompt ]]; then
   source /etc/bash_completion.d/git-prompt
+elif [[ -f /etc/bash_completion.d/git ]]; then
+  source /etc/bash_compltion.d/git
 fi
 
 # all of our .bash files
