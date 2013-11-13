@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#
+# Grabs a named color from the vim color scheme test and places it in
+# ~/.vim/colors/
+#
+
+set -e
+
+colorfile="$1".vim
+fullpath=$HOME/.vim/colors/$colorfile
+
+if [ -e $fullpath ]
+then
+    echo "Color '$1' already exists. Use it"'!'
+else
+    curl -o $HOME/.vim/colors/$1.vim http://vimcolorschemetest.googlecode.com/svn/colors/$1.vim
+    echo "Downloaded color to $fullpath"
+fi
+
+# Return status based on whether the file exists
+[ -e $fullpath ]
