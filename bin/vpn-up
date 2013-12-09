@@ -7,6 +7,8 @@ if [[ -z ${VPN_ENDPOINT} ]]; then
   exit 1
 fi
 
+echo "Connecting to ${VPN_ENDPOINT}"
+
 sudo openconnect -s /etc/vpnc/vpnc-script \
   --pid-file=/var/vpn/connection.pid \
   --background \
