@@ -6,6 +6,9 @@ DOTFILES_ROOT="`pwd`"
 
 set -e
 
+git submodule init
+git submodule update
+
 echo ''
 
 info () {
