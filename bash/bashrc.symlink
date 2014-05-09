@@ -3,14 +3,24 @@ export DOT=$HOME/.dotfiles
 
 shopt -s globstar
 
+# echo is being re-defined here to just let echo work like magic even if all
+# this gets loaded during scp, ansible runs, etc.
+# 
+# Yes, I am an evil person.
+# We'll clean this up after startup is done.
+orig_echo=`which echo`
+echo () {
+  if [[ $- =~ "i" ]]; then
+    $orig_echo $@;
+  fi
+}
+
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 else
-  if [[ $- =~ "i" ]]; then
-    echo "~/.localrc not setup"
-  fi
+  echo "~/.localrc not setup"
 fi
 
 # Make sure that __git_ps1 is defined.
@@ -36,3 +46,8 @@ for file in $config_files ; do
 done
 
 unset config_files
+
+# Clean up the monster
+unset -f echo
+
+
