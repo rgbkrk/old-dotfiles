@@ -23,6 +23,7 @@ config_files=$DOT/**/*.bash
 
 # load the path files first
 for file in $config_files ; do
+  echo $file;
   if [[ $file =~ path\.bash$ ]]; then source $file; fi
 done
 
