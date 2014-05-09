@@ -1,4 +1,3 @@
-echo "Do you have any cheese at all?"
 
 pip_bootstrap_runtime () {
 
@@ -6,6 +5,11 @@ pip_bootstrap_runtime () {
         # Already sourced.
         return 0;
     fi;
+
+    echo "" 
+    echo "ENTER THE CHEESESHOP"
+    echo "" 
+    echo "Do you have any cheese at all?"
 
     export PYTHON_USER_BIN="$(python -m site --user-base)/bin";
     export PYTHON_USER_LIB="$(python -m site --user-site)";
@@ -45,16 +49,16 @@ pip_bootstrap_runtime () {
             command pip "$@";
         fi;
     }
+
+    echo "Yes sir"
+    echo "Now I'm going to ask you that question once more"
+    echo "  If you say no I'm going to shoot you through the head."
+    echo "  Now, do you have any cheese at all?"
+    echo "No."
+    echo "" 
+    echo "**BANG**"
+    echo ""
+    echo "EXIT THE CHEESESHOP"
 }
 
 pip_bootstrap_runtime;
-
-echo "Yes sir"
-echo "Now I'm going to ask you that question once more"
-echo "  If you say no I'm going to shoot you through the head."
-echo "  Now, do you have any cheese at all?"
-echo "No."
-
-echo "**BANG**"
-echo "Python is all set"
-
