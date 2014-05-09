@@ -8,7 +8,9 @@ shopt -s globstar
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 else
-  echo "~/.localrc not setup"
+  if [[ $- =~ "i" ]]; then
+    echo "~/.localrc not setup"
+  fi
 fi
 
 # Make sure that __git_ps1 is defined.
