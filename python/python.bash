@@ -49,16 +49,6 @@ pip_bootstrap_runtime () {
             command pip "$@";
         fi;
     }
-
-    echo "Yes sir"
-    echo "Now I'm going to ask you that question once more"
-    echo "  If you say no I'm going to shoot you through the head."
-    echo "  Now, do you have any cheese at all?"
-    echo "No."
-    echo "" 
-    echo "**BANG**"
-    echo ""
-    echo "EXIT THE CHEESESHOP"
 }
 
-pip_bootstrap_runtime;
+#pip_bootstrap_runtime;

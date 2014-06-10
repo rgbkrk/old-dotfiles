@@ -1,7 +1,11 @@
 # shortcut to this dotfiles path is $DOT
 export DOT=$HOME/.dotfiles
 
-shopt -s globstar
+case "${OSTYPE}" in
+  linux*)
+    shopt -s globstar
+  ;;
+esac
 
 # echo is being re-defined here to just let echo work like magic even if all
 # this gets loaded during scp, ansible runs, etc.
@@ -35,9 +39,11 @@ config_files=$DOT/**/*.bash
 
 # load the path files first
 for file in $config_files ; do
-  if [[ $file =~ path\.bash$ ]]; then source $file; fi
+  if [[ $file =~ path\.bash$ ]]; then
+    source $file
+  fi
 done
-
+#
 # load everything but the path files
 for file in $config_files ; do
   if [[ ! $file =~ path\.bash$ ]]; then
