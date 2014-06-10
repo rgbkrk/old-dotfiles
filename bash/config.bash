@@ -2,12 +2,14 @@
 HISTCONTROL=ignoreboth
 
 # Pump it up!
-shopt -s histappend
-HISTSIZE=50000
-SAVEHIST=50000
-
-shopt -s checkwinsize
-shopt -u direxpand
+case "$OSTYPE" in
+  linux*)
+    export HISTSIZE=50000
+    export SAVEHIST=50000
+    shopt -s histappend
+    shopt -s checkwinsize
+    shopt -u direxpand
+esac
 
 export EDITOR=vim
 
