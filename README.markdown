@@ -3,7 +3,7 @@
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine, forked from
-@smashwilson's (in the complete fork fork).
+@smashwilson's (in the complete fork fork sense), who forked his from @holman's who in turn forked it from @ryanb. The rest are turtles.
 
 Now that I work at Rackspace, I'm spending more time spinning up and tearing
 down these little scratch servers, and nothing makes me sad like a plain bash
@@ -61,23 +61,3 @@ There's a few special files in the hierarchy.
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
-
-## bugs
-
-Like @holman, I want this to work for everyone; that means when you clone it
-down it should work for you even though you may not have `rbenv` installed,
-for example. That said, I do use this as *my* dotfiles, so there's a good chance
-I may break something if I forget to make a check for a dependency. [Toss me
-an issue](https://github.com/rgbkrk/dotfiles/issues) if you're using this
-and I busted your setup, and I'll see what I can do.
-
-## thanks
-
-_Because thanks obeys the transitive property:_
-
-I forked [Ryan Bates](http://github.com/ryanb)' excellent
-[dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
-weight of my changes and tweaks inspired me to finally roll my own. But Ryan's
-dotfiles were an easy way to get into bash customization, and then to jump ship
-to zsh a bit later. A decent amount of the code in these dotfiles stem or are
-inspired from Ryan's original project.
