@@ -53,5 +53,3 @@ printf "$COL_19 888    888 888     888 88888P Y88888 888    888 888     888    8
 printf "$COL_20 Y88b  d88P Y88b. .d88P 8888P   Y8888 888   d88P Y88b. .d88P    888  \n"
 printf "$COL_21  \"Y8888P\"   \"Y88888P\"  888P     Y888 8888888P\"   \"Y88888P\"     888\n"
 tput sgr0 # Reset colors to "normal"
-
-sleep 1

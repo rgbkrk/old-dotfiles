@@ -2,7 +2,7 @@
 	email = AUTHOREMAIL
 	name = AUTHORNAME
 [core]
-	excludesfile = ${HOME}/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 [color]
 	ui = auto
