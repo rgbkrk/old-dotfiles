@@ -347,4 +347,4 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 
 
-
+set paste
