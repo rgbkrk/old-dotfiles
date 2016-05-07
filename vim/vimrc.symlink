@@ -93,12 +93,13 @@ set grepprg=grep\ -nH\ $*
 set autoindent
 
 " Spaces are better than a tab character
-set expandtab
 set smarttab
+set expandtab
 
 " Who wants an 8 character tab?  Not me!
 set shiftwidth=2
 set softtabstop=2
+set tabstop=2
 
 " Use english for spellchecking, but don't spellcheck by default
 if version >= 700

@@ -57,3 +57,9 @@ unset config_files
 unset -f echo
 
 
+
+# added by travis gem
+[ -f /Users/kyle6475/.travis/travis.sh ] && source /Users/kyle6475/.travis/travis.sh
+
+source <(npm completion)
+
