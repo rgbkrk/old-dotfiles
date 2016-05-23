@@ -63,5 +63,5 @@ unset -f echo
 export NVM_DIR="/Users/kylek/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-source <(npm completion)
+#source <(npm completion)
 
