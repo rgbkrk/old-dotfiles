@@ -65,3 +65,4 @@ export NVM_DIR="$HOME/.nvm"
 
 #source <(npm completion)
 
+alias l='ls -la'
