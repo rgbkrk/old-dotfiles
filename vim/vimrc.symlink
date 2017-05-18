@@ -45,30 +45,30 @@ autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
 "autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Restore cursor position to where it was before
-augroup JumpCursorOnEdit
-   au!
-   autocmd BufReadPost *
-            \ if expand("<afile>:p:h") !=? $TEMP |
-            \   if line("'\"") > 1 && line("'\"") <= line("$") |
-            \     let JumpCursorOnEdit_foo = line("'\"") |
-            \     let b:doopenfold = 1 |
-            \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
-            \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-            \        let b:doopenfold = 2 |
-            \     endif |
-            \     exe JumpCursorOnEdit_foo |
-            \   endif |
-            \ endif
-   " Need to postpone using "zv" until after reading the modelines.
-   autocmd BufWinEnter *
-            \ if exists("b:doopenfold") |
-            \   exe "normal zv" |
-            \   if(b:doopenfold > 1) |
-            \       exe  "+".1 |
-            \   endif |
-            \   unlet b:doopenfold |
-            \ endif
-augroup END
+" augroup JumpCursorOnEdit
+"    au!
+"    autocmd BufReadPost *
+"             \ if expand("<afile>:p:h") !=? $TEMP |
+"             \   if line("'\"") > 1 && line("'\"") <= line("$") |
+"             \     let JumpCursorOnEdit_foo = line("'\"") |
+"             \     let b:doopenfold = 1 |
+"             \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
+"             \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
+"             \        let b:doopenfold = 2 |
+"             \     endif |
+"             \     exe JumpCursorOnEdit_foo |
+"             \   endif |
+"             \ endif
+"    " Need to postpone using "zv" until after reading the modelines.
+"    autocmd BufWinEnter *
+"             \ if exists("b:doopenfold") |
+"             \   exe "normal zv" |
+"             \   if(b:doopenfold > 1) |
+"             \       exe  "+".1 |
+"             \   endif |
+"             \   unlet b:doopenfold |
+"             \ endif
+" augroup END
 
 "}}}
 "}}}
@@ -81,7 +81,7 @@ set nocompatible
 set showcmd
 
 " Folding Stuffs
-set foldmethod=marker
+" set foldmethod=marker
 
 " Needed for Syntax Highlighting and stuff
 filetype on
@@ -218,15 +218,15 @@ endfunction
 
 "{{{ Todo List Mode
 
-function! TodoListMode()
-   e ~/.todo.otl
-   Calendar
-   wincmd l
-   set foldlevel=1
-   tabnew ~/.notes.txt
-   tabfirst
-   " or 'norm! zMzr'
-endfunction
+"function! TodoListMode()
+"   e ~/.todo.otl
+"   Calendar
+"   wincmd l
+"   set foldlevel=1
+"   tabnew ~/.notes.txt
+"   tabfirst
+"   " or 'norm! zMzr'
+"endfunction
 
 "}}}
 
@@ -316,7 +316,7 @@ nnoremap <leader>par :%s/^>$//<CR>
 
 "{{{Taglist configuration
 let Tlist_Use_Right_Window = 1
-let Tlist_Enable_Fold_Column = 0
+" let Tlist_Enable_Fold_Column = 0
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_SingleClick = 1
 let Tlist_Inc_Winwidth = 0
