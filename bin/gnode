@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+NODE_PATH="$NVM_BIN/../lib/node_modules" node
