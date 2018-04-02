@@ -5,7 +5,7 @@
 Your dotfiles are how you personalize your system. These are mine, forked from
 @smashwilson's (in the complete fork fork sense), who forked his from @holman's who in turn forked it from @ryanb. The rest are turtles.
 
-Now that I work at Rackspace, I'm spending more time spinning up and tearing
+Now that I work at `$COMPANY`, I'm spending more time spinning up and tearing
 down these little scratch servers, and nothing makes me sad like a plain bash
 prompt with no colors or git zazz, or a completely vanilla vim that does
 indentation all wrong.
