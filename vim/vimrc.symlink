@@ -1,5 +1,16 @@
 " Simple vimrc settings
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+
+Plug 'leafgarland/typescript-vim'
+
+" Initialize plugin system
+call plug#end()
+
 set nocompatible
 set showcmd
 
@@ -13,8 +24,6 @@ set wildmenu
 set hlsearch
 
 set ttyfast
-
-call pathogen#infect()
 
 filetype on
 filetype indent on
@@ -349,3 +358,4 @@ let NERDTreeIgnore = ['\.pyc$']
 
 
 set paste
+

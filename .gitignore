@@ -4,3 +4,5 @@ git/gitconfig.symlink
 *.swp
 *.swo
 vim/vim.symlink/.netrwhist
+
+vim/vim.symlink/plugged
