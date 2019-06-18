@@ -3,5 +3,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # added by Miniconda3 installer
-# yet I don't want it
-# export PATH="/Users/kylek/miniconda3/bin:$PATH"
+export PATH="/Users/kylek/miniconda3/bin:$PATH"
+
+# Deno Land!
+export PATH="/Users/kylek/.deno/bin:$PATH"
+

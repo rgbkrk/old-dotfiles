@@ -4,3 +4,4 @@
 *.sw[op]
 *.rbc
 .venv/*
+node_modules
