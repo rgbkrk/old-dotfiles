@@ -5,3 +5,9 @@
 *.rbc
 .venv/*
 node_modules
+.vscode
+.metals
+
+.ipynb_checkpoints
+Untitled*.ipynb
+default.profraw
